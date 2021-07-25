@@ -15,6 +15,8 @@ public class ConnectionFactory {
 		comboPooledDataSource.setUser("root");
 		comboPooledDataSource.setPassword("SenhaRoot@!123");
 		this.dataSource = comboPooledDataSource;
+	
+		comboPooledDataSource.setMaxPoolSize(15);
 	}
 
 	public Connection recuperarConexao() throws SQLException {
