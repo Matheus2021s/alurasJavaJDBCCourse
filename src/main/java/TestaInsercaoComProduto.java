@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import br.com.mariah.dao.ProdutoDAO;
 import br.com.mariah.model.Produto;
 
 public class TestaInsercaoComProduto {
@@ -12,7 +13,7 @@ public class TestaInsercaoComProduto {
 			ProdutoDAO produtoDAO = new ProdutoDAO(connection);
 			
 			produtoDAO.salvar(comoda);
-			
+			System.out.println(produtoDAO.listar());
 			
 			
 		}
