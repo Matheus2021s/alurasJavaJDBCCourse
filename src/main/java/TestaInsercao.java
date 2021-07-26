@@ -10,7 +10,7 @@ public class TestaInsercao {
 		try (Connection connection = connectionFactory.recuperarConexao()) {
 
 			try (Statement statement = connection.createStatement()) {
-				statement.execute("INSERT INTO PRODUTO (nome, descricao) VALUES ('MOUSE','MOUSE SEM FIO')",
+				statement.execute("INSERT INTO PRODUTO (nome, descricao,CATEGORIA_ID) VALUES ('cadeira','cadeira DE jantar',2)",
 						Statement.RETURN_GENERATED_KEYS);
 
 				ResultSet resultSet = statement.getGeneratedKeys();
